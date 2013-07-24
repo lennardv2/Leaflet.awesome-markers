@@ -39,7 +39,7 @@ L.AwesomeMarkers.Icon = L.Icon.extend({
       div.innerHTML = this._createInner();
     }
 
-    if (options.text) {
+    if (options.text != undefined) {
       div.innerHTML = this._createInnerText();
     }
 
