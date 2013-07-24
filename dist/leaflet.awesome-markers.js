@@ -39,6 +39,10 @@ L.AwesomeMarkers.Icon = L.Icon.extend({
       div.innerHTML = this._createInner();
     }
 
+    if (options.text) {
+      div.innerHTML = this._createInnerText();
+    }
+
     if (options.bgPos) {
       div.style.backgroundPosition =
               (-options.bgPos.x) + 'px ' + (-options.bgPos.y) + 'px';
@@ -58,6 +62,20 @@ L.AwesomeMarkers.Icon = L.Icon.extend({
     return "<i class='" + iconClass 
     + (this.options.spin ? " icon-spin" :"") 
     + (this.options.iconColor ? " icon-" + this.options.iconColor :"") + "'></i>";
+  },
+
+  _createInnerText: function() {
+    if (this.options.textFormat != undefined && this.options.textFormat == 'letter') {
+      this.options.text = this.num2letter(this.options.text);
+    }
+    return "<strong class='"
+    + (this.options.spin ? " icon-spin" :"") 
+    + (this.options.iconColor ? " icon-" + this.options.iconColor :"") + "'>" + this.options.text + "</strong>";
+  },
+
+  num2letter: function(num) {
+    var base = 'A'.charCodeAt(0);
+    return num < 26 ? String.fromCharCode(num + base) : String.fromCharCode(base + Math.floor(num/26) -1, base + num%26);   
   },
 
   _setIconStyles: function (img, name) {
