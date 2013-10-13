@@ -72,7 +72,7 @@ The 'icon' property supports these strings:
 - 'bookmark'
 - .... and many more, see: http://fortawesome.github.com/Font-Awesome/#icons-new
 - Or: http://twitter.github.com/bootstrap/base-css.html#icons
-- Also supports Bootstrap 3 Glyphicons! Simply use 'glyphicon-<icon-name>' for 'icon': http://getbootstrap.com/components/#glyphicons
+- Also supports Bootstrap 3 Glyphicons! Simply use `glyphicon-<icon-name>` for `icon`: http://getbootstrap.com/components/#glyphicons
 
 ### Spinning icons (only Font-Awesome)
 You can make any icon spin by setting the spin option to true:
