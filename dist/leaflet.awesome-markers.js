@@ -49,15 +49,20 @@ L.AwesomeMarkers.Icon = L.Icon.extend({
   },
 
   _createInner: function() {
-    var iconClass;
-    if(this.options.icon.slice(0,5)==="icon-"){
+    var iconClass, tag = 'i';
+
+    if(this.options.icon.slice(0,10)==="glyphicon-"){
+      iconClass = 'glyphicon ' + this.options.icon;
+
+      tag = 'span';
+    } else if(this.options.icon.slice(0,5)==="icon-"){
       iconClass=this.options.icon;
-    }else{
+    } else{
       iconClass="icon-"+this.options.icon;
     }
-    return "<i class='" + iconClass 
+    return "<" + tag + " class='" + iconClass 
     + (this.options.spin ? " icon-spin" :"") 
-    + (this.options.iconColor ? " icon-" + this.options.iconColor :"") + "'></i>";
+    + (this.options.iconColor ? " icon-" + this.options.iconColor :"") + "'></" + tag + ">";
   },
 
   _setIconStyles: function (img, name) {

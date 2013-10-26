@@ -42,6 +42,11 @@ Version: 1.0
   font-size: 14px;
 }
 
+.awesome-marker .glyphicon {
+  margin-top: 9px;
+  font-size: 14px;
+}
+
 .awesome-marker .icon-white {
   color: #fff;
 }
