@@ -35,11 +35,17 @@ Version: 1.0
  }
 }
 
-.awesome-marker i {
+.awesome-marker i,
+.awesome-marker strong {
   color: #333;
   margin-top: 10px;
   display: inline-block;
   font-size: 14px;
+}
+
+.awesome-marker strong {
+  width: 30px;
+  text-align: center;
 }
 
 .awesome-marker .icon-white {
