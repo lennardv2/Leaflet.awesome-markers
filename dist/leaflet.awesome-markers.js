@@ -26,6 +26,7 @@
             shadowAnchor: [10, 12],
             shadowSize: [36, 16],
             className: 'awesome-marker',
+            markerType: 'soft'
             prefix: 'glyphicon',
             spinClass: 'fa-spin',
             icon: 'home',
@@ -93,7 +94,7 @@
                 anchor = size.divideBy(2, true);
             }
 
-            img.className = 'awesome-marker-' + name + ' ' + options.className;
+            img.className = 'awesome-marker-' + name + ' ' + options.className + ' awesome-marker-' + options.markerType;
 
             if (anchor) {
                 img.style.marginLeft = (-anchor.x) + 'px';
@@ -113,7 +114,7 @@
             return div;
       }
     });
-        
+
     L.AwesomeMarkers.icon = function (options) {
         return new L.AwesomeMarkers.Icon(options);
     };

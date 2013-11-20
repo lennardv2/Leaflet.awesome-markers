@@ -1,4 +1,4 @@
-/* 
+/*
 Author: L. Voogdt
 License: MIT
 Version: 1.0
@@ -6,7 +6,6 @@ Version: 1.0
 
 /* Marker setup */
 .awesome-marker {
-  background: url('images/markers-soft.png') no-repeat 0 0;
   width: 35px;
   height: 46px;
   position:absolute;
@@ -14,6 +13,14 @@ Version: 1.0
   top:0;
   display: block;
   text-align: center;
+}
+
+.awesome-marker-matte {
+  background: url('images/markers-matte.png') no-repeat 0 0;
+}
+
+.awesome-marker-soft {
+  background: url('images/markers-soft.png') no-repeat 0 0;
 }
 
 .awesome-marker-shadow {
@@ -25,14 +32,21 @@ Version: 1.0
 /* Retina displays */
 @media (min--moz-device-pixel-ratio: 1.5),(-o-min-device-pixel-ratio: 3/2),
 (-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5),(min-resolution: 1.5dppx) {
- .awesome-marker {
-  background-image: url('images/markers-soft@2x.png');
-  background-size: 360px 46px;
- }
- .awesome-marker-shadow {
-  background-image: url('images/markers-shadow@2x.png');
-  background-size: 35px 16px;
- }
+  .awesome-marker {
+    background-size: 360px 46px;
+  }
+  .awesome-marker-soft {
+    background-image: url('images/markers-soft@2x.png');
+  }
+
+  .awesome-marker-matte {
+    background-image: url('images/markers-matte@2x.png');
+  }
+
+  .awesome-marker-shadow {
+    background-image: url('images/markers-shadow@2x.png');
+    background-size: 35px 16px;
+  }
 }
 
 .awesome-marker i {
