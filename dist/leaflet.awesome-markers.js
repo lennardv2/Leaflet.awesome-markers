@@ -26,7 +26,7 @@
             shadowAnchor: [10, 12],
             shadowSize: [36, 16],
             className: 'awesome-marker',
-            markerType: 'awesome-marker-soft'
+            markerType: 'soft'
             prefix: 'glyphicon',
             spinClass: 'fa-spin',
             icon: 'home',
@@ -94,7 +94,7 @@
                 anchor = size.divideBy(2, true);
             }
 
-            img.className = 'awesome-marker-' + name + ' ' + options.className + ' ' + options.markerName;
+            img.className = 'awesome-marker-' + name + ' ' + options.className + ' awesome-marker-' + options.markerType;
 
             if (anchor) {
                 img.style.marginLeft = (-anchor.x) + 'px';
