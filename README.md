@@ -11,7 +11,7 @@ For bootstrap 2.x & Fontawesome 3.x use Leaflet.awesome-markers v1.0
 ## Screenshots
 ![AwesomeMarkers screenshot](https://raw.github.com/lvoogdt/Leaflet.awesome-markers/master/screenshots/screenshot-soft.png "Screenshot of AwesomeMarkers")
 
-<a href="http://jsfiddle.net/VPzu4/92/" target="_blank">JSfiddle demo</a> 
+<a href="http://jsfiddle.net/VPzu4/92/" target="_blank">JSfiddle demo</a>
 
 ### Twitter Bootstrap/Font-Awesome icons
 This plugin depends on either Bootstrap or Font-Awesome for the rendering of the icons. See these urls for more information:
@@ -24,34 +24,47 @@ For Twitter bootstrap:
 - http://twitter.github.com/bootstrap/
 
 ## Using the plugin
-- 1) First, follow the steps for including Font-Awesome or Twitter bootstrap into your application.
 
-For Font-Awesome, steps are located here:
+1. First, follow the steps for including Font-Awesome or Twitter bootstrap into your application.
 
-http://fortawesome.github.io/Font-Awesome/get-started/
+    For Font-Awesome, steps are located here:
 
-For Twitter bootstrap, steps are here:
+    http://fortawesome.github.io/Font-Awesome/get-started/
 
-http://getbootstrap.com/getting-started/
-    
+    For Twitter bootstrap, steps are here:
 
-- 2) Next, copy the dist/images directory, awesome-markers.css, and awesome-markers.js to your project and include them:
-````xml
-<link rel="stylesheet" href="css/leaflet.awesome-markers.css">
-````
+    http://getbootstrap.com/getting-started/
+
+2. Next, copy `awesome-markers.js` to your project and include it:
 ````xml
 <script src="js/leaflet.awesome-markers.js"></script>
 ````
 
-- 3) Now use the plugin to create a marker like this:
+3. If you're using plain CSS, copy `awesome-markers.css` to your project and then copy the
+`dist/images` directory to a directory called `images` which is in the same location as your
+copy of `awesome-markers.css` and then include it:
+````xml
+<link rel="stylesheet" href="css/leaflet.awesome-markers.css">
+````
+
+4. If you're using SCSS, include `dist/leaflet.awesome-markers.scss` into your SCSS source. Copy the
+`dist/images` directory into your project. By default the marker icons will be loaded from a directory
+called `images` in the same location as your output CSS files, but this can be overridden by defining
+a SCSS variable called `$awesome-marker-icon-path` before you include `leaflet.awesome-markers.scss`.
+Then include your final output CSS file:
+````xml
+<link rel="stylesheet" href="css/project.css">
+````
+
+5. Now use the plugin to create a marker like this:
 ````js
-  // Creates a red marker with the coffee icon
-  var redMarker = L.AwesomeMarkers.icon({
-    icon: 'coffee',
-    markerColor: 'red'
-  });
-      
-  L.marker([51.941196,4.512291], {icon: redMarker}).addTo(map);
+    // Creates a red marker with the coffee icon
+    var redMarker = L.AwesomeMarkers.icon({
+        icon: 'coffee',
+        markerColor: 'red'
+    });
+
+    L.marker([51.941196,4.512291], {icon: redMarker}).addTo(map);
 ````
 
 ### Properties
@@ -62,7 +75,7 @@ http://getbootstrap.com/getting-started/
 | prefix          | Select de icon library | 'glyphicon'   | 'fa' for font-awesome or 'glyphicon' for bootstrap 3 |
 | markerColor     | Color of the marker    | 'blue'        | 'red', 'darkred', 'orange', 'green', 'darkgreen', 'blue', 'purple', 'darkpuple', 'cadetblue' |
 | iconColor       | Color of the icon      | 'white'       | 'white', 'black' or css code (hex, rgba etc) |
-| spin            | Make the icon spin     | false         | true or false. Font-awesome required | 
+| spin            | Make the icon spin     | false         | true or false. Font-awesome required |
 | extraClasses    | Additional classes in the created <i> tag | '' | 'fa-rotate90 myclass' eller other custom configuration |
 
 
