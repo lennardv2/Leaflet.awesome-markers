@@ -31,7 +31,8 @@
             extraClasses: '',
             icon: 'home',
             markerColor: 'blue',
-            iconColor: 'white'
+            iconColor: 'white',
+            title: null
         },
 
         initialize: function (options) {
@@ -44,6 +45,10 @@
 
             if (options.icon) {
                 div.innerHTML = this._createInner();
+            }
+
+            if (options.title) {
+                div.title = options.title;
             }
 
             if (options.bgPos) {
