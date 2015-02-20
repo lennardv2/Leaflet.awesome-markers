@@ -69,8 +69,11 @@
             }
 
             if(options.iconColor) {
-                if(options.iconColor === 'white' || options.iconColor === 'black') {
+                if(options.iconColor === 'white' || options.iconColor === 'black' &&
+                    options.prefix !== 'fa') {
                     iconColorClass = "icon-" + options.iconColor;
+                } else if (options.prefix === 'fa' && options.iconColor === 'white') {
+                  iconColorClass = "fa-inverse";
                 } else {
                     iconColorStyle = "style='color: " + options.iconColor + "' ";
                 }
