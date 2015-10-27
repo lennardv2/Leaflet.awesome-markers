@@ -35,6 +35,22 @@ Version: 1.0
  }
 }
 
+.awesome-marker {
+  cursor: pointer;
+}
+
+.awesome-marker-html span{
+  position: absolute;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  right: 7px;
+  top: 8px;
+  text-align: center;
+  vertical-align: middle;
+  width: 22px;
+}
+
 .awesome-marker i {
   color: #333;
   margin-top: 10px;
