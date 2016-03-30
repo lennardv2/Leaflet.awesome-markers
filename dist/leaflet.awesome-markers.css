@@ -15,10 +15,6 @@ Version: 1.0
     text-align: center;
  }
 
-svg text {
-    font-family: FontAwesome;
-}
-
 .awesome-marker-shadow {
   background: url('images/markers-shadow.png') no-repeat 0 0;
   width: 36px;
@@ -51,35 +47,35 @@ svg text {
 
 /* Colors */
 .awesome-marker-icon-red {
-  background-position: 0 0;
+    fill: red;
 }
 
 .awesome-marker-icon-darkred {
-  background-position: -180px 0;
+    fill: darkred;
 }
 
 .awesome-marker-icon-lightred {
-  background-position: -360px 0;
+    fill: red;
 }
 
 .awesome-marker-icon-orange {
-  background-position: -36px 0;
+    fill: orange;
 }
 
 .awesome-marker-icon-beige {
-  background-position: -396px 0;
+    fill: beige;
 }
 
 .awesome-marker-icon-green {
-  background-position: -72px 0;
+    fill: green;
 }
 
 .awesome-marker-icon-darkgreen {
-  background-position: -252px 0;
+    fill: darkgreen;
 }
 
 .awesome-marker-icon-lightgreen {
-  background-position: -432px 0;
+    fill: lightgreen;
 }
 
 .awesome-marker-icon-blue {
@@ -87,41 +83,41 @@ svg text {
 }
 
 .awesome-marker-icon-darkblue {
-  background-position: -216px 0;
+    fill: darkblue;
 }
 
 .awesome-marker-icon-lightblue {
-  background-position: -468px 0;
+    fill: lightblue;
 }
 
 .awesome-marker-icon-purple {
-  background-position: -144px 0;
+    fill: purple;
 }
 
 .awesome-marker-icon-darkpurple {
-  background-position: -288px 0;
+    fill: purple;
 }
 
 .awesome-marker-icon-pink {
-  background-position: -504px 0;
+    fill: pink;
 }
 
 .awesome-marker-icon-cadetblue {
-  background-position: -324px 0;
+    fill: darkblue;
 }
 
 .awesome-marker-icon-white {
-  background-position: -574px 0;
+    fill: white;
 }
 
 .awesome-marker-icon-gray {
-  background-position: -648px 0;
+    fill: gray;
 }
 
 .awesome-marker-icon-lightgray {
-  background-position: -612px 0;
+    fill: lightgray
 }
 
 .awesome-marker-icon-black {
-  background-position: -682px 0;
+    fill: black;
 }

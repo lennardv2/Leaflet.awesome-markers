@@ -36,6 +36,7 @@
         },
 
         createIcon: function () {
+            var options = L.Util.setOptions(this);
             var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
             var path = document.createElementNS('http://www.w3.org/2000/svg', "path");
             var icongroup = document.createElementNS('http://www.w3.org/2000/svg', "g");
@@ -45,33 +46,26 @@
             svg.setAttribute('height', '42');
             svg.setAttribute('class', 'awesome-marker');
             svg.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
-            icon.value = 'h';
 
             path.setAttributeNS(null, "d", "M15.6,1c-7.7,0-14,6.3-14,14c0,10.5,14,26,14,26s14-15.5,14-26C29.6,7.3,23.3,1,15.6,1z");
-            path.setAttribute('class', 'awesome-marker-icon-blue');
+            path.setAttribute('class', 'awesome-marker-icon-' + options.markerColor);
 
+            icon.textContent = options.icon;
+            icon.setAttribute('x', '9');
+            icon.setAttribute('y', '20');
+            icon.setAttribute('fill', options.iconColor);
+            icon.setAttribute('font-family', 'FontAwesome');
+            icon.setAttribute('font-size', '14px');
+
+            svg.appendChild(path);
             icongroup.appendChild(icon);
             svg.appendChild(icongroup);
-            svg.appendChild(path);
 
-            //if (options.icon) {
-            //    div.innerHTML = this._createInner();
-            //}
-
-            console.log(this._setIconStyles(svg, 'icon-blue'));
-
-            //this._setIconStyles(div, 'icon-' + options.markerColor);
             return svg;
         },
 
         _createInner: function() {
             var iconClass, iconSpinClass = "", iconColorClass = "", iconColorStyle = "", options = this.options;
-
-            if(options.icon.slice(0,options.prefix.length+1) === options.prefix + "-") {
-                iconClass = options.icon;
-            } else {
-                iconClass = options.prefix + "-" + options.icon;
-            }
 
             if(options.spin && typeof options.spinClass === "string") {
                 iconSpinClass = options.spinClass;
@@ -85,7 +79,7 @@
                 }
             }
 
-            return options.extraClasses + " " + options.prefix + " " + iconClass + " " + iconSpinClass + " " + iconColorClass;
+            return options.extraClasses + " " + iconClass + " " + iconSpinClass + " " + iconColorClass;
         },
 
         _setIconStyles: function (img, name) {
