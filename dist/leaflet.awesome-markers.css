@@ -6,21 +6,12 @@ Version: 1.0
 
 /* Marker setup */
 .awesome-marker {
-/*  background: url('images/markers-soft.svg') no-repeat 0 0;
-  width: 35px;
-  height: 46px;
-  position:absolute;
-  left:0;
-  top:0;
-  display: block;
-  text-align: center;*/
-
   display: block;
   text-indent: -9999px;
-  width: 35px;
-  height: 46px;
+  width: 48px;
+  height: 48px;
   background: url('images/marker.svg');
-  background-size: 100px 82px;
+  background-size: 48px 48px;
 }
 
 .awesome-marker-shadow {
