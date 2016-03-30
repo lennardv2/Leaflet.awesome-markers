@@ -20,9 +20,6 @@
 
     L.AwesomeMarkers.Icon = L.Icon.extend({
         options: {
-            iconSize: [35, 45],
-            iconAnchor:   [17, 42],
-            popupAnchor: [1, -32],
             shadowAnchor: [10, 12],
             shadowSize: [36, 16],
             className: 'awesome-marker',
@@ -39,20 +36,32 @@
         },
 
         createIcon: function () {
-            var div = document.createElement('div'),
-                options = this.options;
+            var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+            var path = document.createElementNS('http://www.w3.org/2000/svg', "path");
+            var icongroup = document.createElementNS('http://www.w3.org/2000/svg', "g");
+            var icon = document.createElementNS('http://www.w3.org/2000/svg', "text");
 
-            if (options.icon) {
-                div.innerHTML = this._createInner();
-            }
+            svg.setAttribute('width', '31');
+            svg.setAttribute('height', '42');
+            svg.setAttribute('class', 'awesome-marker');
+            svg.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
+            icon.value = 'h';
 
-            if (options.bgPos) {
-                div.style.backgroundPosition =
-                    (-options.bgPos.x) + 'px ' + (-options.bgPos.y) + 'px';
-            }
+            path.setAttributeNS(null, "d", "M15.6,1c-7.7,0-14,6.3-14,14c0,10.5,14,26,14,26s14-15.5,14-26C29.6,7.3,23.3,1,15.6,1z");
+            path.setAttribute('class', 'awesome-marker-icon-blue');
 
-            this._setIconStyles(div, 'icon-' + options.markerColor);
-            return div;
+            icongroup.appendChild(icon);
+            svg.appendChild(icongroup);
+            svg.appendChild(path);
+
+            //if (options.icon) {
+            //    div.innerHTML = this._createInner();
+            //}
+
+            console.log(this._setIconStyles(svg, 'icon-blue'));
+
+            //this._setIconStyles(div, 'icon-' + options.markerColor);
+            return svg;
         },
 
         _createInner: function() {
@@ -76,7 +85,7 @@
                 }
             }
 
-            return "<i " + iconColorStyle + "class='" + options.extraClasses + " " + options.prefix + " " + iconClass + " " + iconSpinClass + " " + iconColorClass + "'></i>";
+            return options.extraClasses + " " + options.prefix + " " + iconClass + " " + iconSpinClass + " " + iconColorClass;
         },
 
         _setIconStyles: function (img, name) {

@@ -6,12 +6,17 @@ Version: 1.0
 
 /* Marker setup */
 .awesome-marker {
-  display: block;
-  text-indent: -9999px;
-  width: 48px;
-  height: 48px;
-  background: url('images/marker.svg');
-  background-size: 48px 48px;
+    margin-top:-42px;
+    margin-left: -17px;
+    position:absolute;
+    left:0;
+    top:0;
+    display: block;
+    text-align: center;
+ }
+
+svg text {
+    font-family: FontAwesome;
 }
 
 .awesome-marker-shadow {
@@ -78,7 +83,7 @@ Version: 1.0
 }
 
 .awesome-marker-icon-blue {
-  background-position: -108px 0;
+  fill: blue;
 }
 
 .awesome-marker-icon-darkblue {
