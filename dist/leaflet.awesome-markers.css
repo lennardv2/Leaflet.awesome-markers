@@ -46,78 +46,52 @@ Version: 1.0
 }
 
 /* Colors */
-.awesome-marker-icon-red {
-    fill: red;
-}
 
-.awesome-marker-icon-darkred {
-    fill: darkred;
-}
 
-.awesome-marker-icon-lightred {
-    fill: red;
+.awesome-marker-icon-purple {
+    fill: #5f2f9b;
 }
 
 .awesome-marker-icon-orange {
-    fill: #DAA42F;
-}
-
-.awesome-marker-icon-lightorange {
-    fill: #ED6A5A;
-}
-
-.awesome-marker-icon-green {
-    fill: #159E81;
-}
-
-.awesome-marker-icon-darkgreen {
-    fill: darkgreen;
-}
-
-.awesome-marker-icon-lightgreen {
-    fill: #6CF2D4;
+    fill: #fea179;
 }
 
 .awesome-marker-icon-blue {
-  fill: #004FFF;
+    fill: #36a6be;
 }
 
-.awesome-marker-icon-darkblue {
-    fill: darkblue;
+.awesome-marker-icon-yellow {
+    fill: #f5dd90;
 }
 
-.awesome-marker-icon-lightblue {
-    fill: #31AFD4;
+.awesome-marker-icon-lightgreen {
+    fill: #36beac;
 }
 
-.awesome-marker-icon-purple {
-    fill: purple;
+.awesome-marker-icon-darkred {
+    fill: #89023e;
 }
 
-.awesome-marker-icon-darkpurple {
-    fill: purple;
+.awesome-marker-icon-green {
+    fill: #89a75d;
+}
+
+.awesome-marker-icon-lightpurple {
+    fill: #9b2f85;
 }
 
 .awesome-marker-icon-pink {
-    fill: pink;
+    fill: #ff97ae;
 }
 
-.awesome-marker-icon-cadetblue {
-    fill: darkblue;
+.awesome-marker-icon-darkgreen {
+    fill: #2f584c;
 }
 
-.awesome-marker-icon-white {
-    fill: white;
-}
-
-.awesome-marker-icon-gray {
-    fill: gray;
-}
-
-.awesome-marker-icon-lightgray {
-    fill: lightgray
+.awesome-marker-icon-darkblue {
+    fill: #10138b;
 }
 
 .awesome-marker-icon-black {
-    fill: black;
+    fill: #333333;
 }
