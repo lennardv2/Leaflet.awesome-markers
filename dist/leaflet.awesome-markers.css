@@ -59,15 +59,15 @@ Version: 1.0
 }
 
 .awesome-marker-icon-orange {
-    fill: orange;
+    fill: #DAA42F;
 }
 
-.awesome-marker-icon-beige {
-    fill: beige;
+.awesome-marker-icon-lightorange {
+    fill: #ED6A5A;
 }
 
 .awesome-marker-icon-green {
-    fill: green;
+    fill: #159E81;
 }
 
 .awesome-marker-icon-darkgreen {
@@ -75,11 +75,11 @@ Version: 1.0
 }
 
 .awesome-marker-icon-lightgreen {
-    fill: lightgreen;
+    fill: #6CF2D4;
 }
 
 .awesome-marker-icon-blue {
-  fill: blue;
+  fill: #004FFF;
 }
 
 .awesome-marker-icon-darkblue {
@@ -87,7 +87,7 @@ Version: 1.0
 }
 
 .awesome-marker-icon-lightblue {
-    fill: lightblue;
+    fill: #31AFD4;
 }
 
 .awesome-marker-icon-purple {

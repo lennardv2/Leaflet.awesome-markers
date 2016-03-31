@@ -26,7 +26,7 @@
             prefix: 'glyphicon',
             spinClass: 'fa-spin',
             extraClasses: '',
-            icon: 'home',
+            icon: '\uf05e',
             markerColor: 'blue',
             iconColor: 'white'
         },
