@@ -13,36 +13,32 @@ Version: 1.0
     top:0;
     display: block;
     text-align: center;
- }
+}
 
 .awesome-marker-shadow {
-  background: url('images/markers-shadow.png') no-repeat 0 0;
-  width: 36px;
-  height: 16px;
+    background: url('images/markers-shadow.png') no-repeat 0 0;
+    width: 36px;
+    height: 16px;
 }
 
 /* Retina displays */
 @media (min--moz-device-pixel-ratio: 1.5),(-o-min-device-pixel-ratio: 3/2),
 (-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5),(min-resolution: 1.5dppx) {
- .awesome-marker {
-  background-image: url('images/markers-soft@2x.png');
-  background-size: 720px 46px;
- }
- .awesome-marker-shadow {
-  background-image: url('images/markers-shadow@2x.png');
-  background-size: 35px 16px;
- }
+    .awesome-marker-shadow {
+        background-image: url('images/markers-shadow@2x.png');
+        background-size: 35px 16px;
+    }
 }
 
 .awesome-marker i {
-  color: #333;
-  margin-top: 10px;
-  display: inline-block;
-  font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 14px;
 }
 
 .awesome-marker .icon-white {
-  color: #fff;
+    color: #fff;
 }
 
 /* Colors */
@@ -95,3 +91,4 @@ Version: 1.0
 .awesome-marker-icon-black {
     fill: #333333;
 }
+
