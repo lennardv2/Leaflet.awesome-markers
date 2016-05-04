@@ -48,9 +48,9 @@
             svg.setAttribute('class', 'awesome-marker');
             svg.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
             
-            backgroundCircle.setAttribute('cx', '15');
-            backgroundCircle.setAttribute('cy', '10');
-            backgroundCircle.setAttribute('r', '20');
+            backgroundCircle.setAttribute('cx', '16');
+            backgroundCircle.setAttribute('cy', '15');
+            backgroundCircle.setAttribute('r', '11');
             backgroundCircle.setAttribute('fill', 'red');
 
             path.setAttributeNS(null, "d", "M15.6,1c-7.7,0-14,6.3-14,14c0,10.5,14,26,14,26s14-15.5,14-26C29.6,7.3,23.3,1,15.6,1z");
@@ -63,8 +63,8 @@
             icon.setAttribute('font-family', 'FontAwesome');
             icon.setAttribute('font-size', '14px');
 
-            svg.appendChild(backgroundCircle);
             svg.appendChild(path);
+            svg.appendChild(backgroundCircle);
             icongroup.appendChild(icon);
             svg.appendChild(icongroup);
 
