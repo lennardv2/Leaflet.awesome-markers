@@ -27,8 +27,8 @@
             spinClass: 'fa-spin',
             extraClasses: '',
             icon: '\uf05e',
-            markerColor: 'blue',
-            iconColor: 'white'
+            markerColor: 'white',
+            iconColor: 'black'
         },
 
         initialize: function (options) {
@@ -51,10 +51,10 @@
             backgroundCircle.setAttribute('cx', '16');
             backgroundCircle.setAttribute('cy', '15');
             backgroundCircle.setAttribute('r', '11');
-            backgroundCircle.setAttribute('fill', 'red');
+            backgroundCircle.setAttribute('fill', 'awesome-marker-icon-' + options.markerColor);
 
             path.setAttributeNS(null, "d", "M15.6,1c-7.7,0-14,6.3-14,14c0,10.5,14,26,14,26s14-15.5,14-26C29.6,7.3,23.3,1,15.6,1z");
-            path.setAttribute('class', 'awesome-marker-icon-' + options.markerColor);
+            path.setAttribute('class', 'awesome-marker-background');
 
             icon.textContent = options.icon;
             icon.setAttribute('x', '9');
