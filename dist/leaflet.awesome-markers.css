@@ -43,6 +43,10 @@ Version: 1.0
 
 /* Colors */
 
+.awesome-marker-background {
+    fill: #fff;
+}
+
 
 .awesome-marker-icon-purple {
     fill: #5f2f9b;
