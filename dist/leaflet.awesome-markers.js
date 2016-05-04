@@ -23,12 +23,9 @@
             shadowAnchor: [10, 12],
             shadowSize: [36, 16],
             className: 'awesome-marker',
-            prefix: 'glyphicon',
-            spinClass: 'fa-spin',
-            extraClasses: '',
-            icon: '\uf05e',
+            icon: 'block',
             markerColor: 'white',
-            iconColor: 'black'
+            iconColor: 'white'
         },
 
         initialize: function (options) {
@@ -48,20 +45,21 @@
             svg.setAttribute('class', 'awesome-marker');
             svg.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
             
-            backgroundCircle.setAttribute('cx', '16');
+            backgroundCircle.setAttribute('cx', '15.5');
             backgroundCircle.setAttribute('cy', '15');
             backgroundCircle.setAttribute('r', '11');
-            backgroundCircle.setAttribute('fill', 'awesome-marker-icon-' + options.markerColor);
+            backgroundCircle.setAttribute('fill', options.markerColor);
 
             path.setAttributeNS(null, "d", "M15.6,1c-7.7,0-14,6.3-14,14c0,10.5,14,26,14,26s14-15.5,14-26C29.6,7.3,23.3,1,15.6,1z");
             path.setAttribute('class', 'awesome-marker-background');
+            path.setAttribute('stroke', 'gray');
 
             icon.textContent = options.icon;
-            icon.setAttribute('x', '9');
-            icon.setAttribute('y', '20');
+            icon.setAttribute('x', '7');
+            icon.setAttribute('y', '23');
+            icon.setAttribute('class', 'material-icons');
             icon.setAttribute('fill', options.iconColor);
-            icon.setAttribute('font-family', 'FontAwesome');
-            icon.setAttribute('font-size', '14px');
+            icon.setAttribute('font-family', 'Material Icons');
 
             svg.appendChild(path);
             svg.appendChild(backgroundCircle);
