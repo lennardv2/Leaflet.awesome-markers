@@ -39,6 +39,7 @@
             var options = L.Util.setOptions(this);
             var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
             var path = document.createElementNS('http://www.w3.org/2000/svg', "path");
+            var backgroundCircle = document.createElementNS('http://www.w3.org/2000/svg', "circle");
             var icongroup = document.createElementNS('http://www.w3.org/2000/svg', "g");
             var icon = document.createElementNS('http://www.w3.org/2000/svg', "text");
 
@@ -46,6 +47,11 @@
             svg.setAttribute('height', '42');
             svg.setAttribute('class', 'awesome-marker');
             svg.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
+            
+            backgroundCircle.setAttribute('cx', '15');
+            backgroundCircle.setAttribute('cy', '10');
+            backgroundCircle.setAttribute('r', '20');
+            backgroundCircle.setAttribute('fill', 'red');
 
             path.setAttributeNS(null, "d", "M15.6,1c-7.7,0-14,6.3-14,14c0,10.5,14,26,14,26s14-15.5,14-26C29.6,7.3,23.3,1,15.6,1z");
             path.setAttribute('class', 'awesome-marker-icon-' + options.markerColor);
@@ -57,6 +63,7 @@
             icon.setAttribute('font-family', 'FontAwesome');
             icon.setAttribute('font-size', '14px');
 
+            svg.appendChild(backgroundCircle);
             svg.appendChild(path);
             icongroup.appendChild(icon);
             svg.appendChild(icongroup);
