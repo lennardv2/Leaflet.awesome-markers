@@ -110,7 +110,7 @@ See [JSFIddle](http://jsfiddle.net/markmarijnissen/VPzu4/286/)
 
 ### Using Square Markers
 
-![Square Markers screenshot](https://raw.github.com/lvoogdt/Leaflet.awesome-markers/master/screenshots/screenshot-square-markers.png "Screenshot of Square Markers")
+![Square Markers screenshot](/screenshots/screenshot-square-markers.png "Screenshot of Square Markers")
 
 ````js
   // Creates a red square marker with the coffee icon
