@@ -115,6 +115,19 @@ Set default prefix to something other than `glypicon`
 
 See [JSFIddle](http://jsfiddle.net/markmarijnissen/VPzu4/286/)
 
+### Using Square Markers
+
+![Square Markers screenshot](/screenshots/screenshot-square-markers.png "Screenshot of Square Markers")
+
+````js
+  // Creates a red square marker with the coffee icon
+  var squareRedMarker = L.AwesomeMarkers.icon({
+    icon: 'coffee',
+    markerColor: 'red'
+    className: 'awesome-marker awesome-marker-square'
+  });
+````
+
 ## License
 - Leaflet.AwesomeMarkers and colored markers are licensed under the MIT License - http://opensource.org/licenses/mit-license.html.
 - Font Awesome: http://fortawesome.github.io/Font-Awesome/license/
