@@ -19,7 +19,7 @@ Use version 2.0 for newer versions of bootstrap and font-awesome!
 ## Screenshots
 ![AwesomeMarkers screenshot](https://raw.github.com/lvoogdt/Leaflet.awesome-markers/master/screenshots/screenshot-soft.png "Screenshot of AwesomeMarkers")
 
-<a href="http://jsfiddle.net/VPzu4/92/" target="_blank">JSfiddle demo</a> 
+<a href="http://jsfiddle.net/VPzu4/975/" target="_blank">JSfiddle demo</a> 
 
 ### Twitter Bootstrap/Font-Awesome icons
 This plugin depends on either Bootstrap or Font-Awesome for the rendering of the icons. See these urls for more information:
