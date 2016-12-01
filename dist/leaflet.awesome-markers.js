@@ -32,7 +32,8 @@
             icon: 'home',
             markerColor: 'blue',
             iconColor: 'white',
-            iconRotate: 0
+            iconRotate: 0,
+            font: 'monospace'
         },
 
         initialize: function (options) {
@@ -61,9 +62,8 @@
                 iconSpinClass = "",
                 iconColorClass = "",
                 options = this.options,
-                inlineStyle = "style='";
 
-            if(options.icon.slice(0,options.prefix.length+1) === options.prefix + "-") {
+            if(!options.prefix || (options.icon.slice(0,options.prefix.length+1) === options.prefix + "-")) {
                 iconClass = options.icon;
             } else {
                 iconClass = options.prefix + "-" + options.icon;
@@ -80,19 +80,26 @@
                 } else if (options.prefix === 'fa' && options.iconColor === 'white') {
                   iconColorClass = "fa-inverse";
                 } else {
-                    inlineStyle += "color: " + options.iconColor + ";";
+                    iconColorStyle = "color: " + options.iconColor + ";";
                 }
+            }
+            if(options.font && options.text) {
+                iconColorStyle += "font-family: " + options.font + ";";
             }
 
             if(options.iconRotate && options.iconRotate !== 0) {
-                inlineStyle += "-webkit-transform: rotate(" + options.iconRotate + "deg);";
-                inlineStyle += "-moz-transform: rotate(" + options.iconRotate + "deg);";
-                inlineStyle += "-o-transform: rotate(" + options.iconRotate + "deg);";
-                inlineStyle += "-ms-transform: rotate(" + options.iconRotate + "deg);";
-                inlineStyle += "transform: rotate(" + options.iconRotate + "deg);";
+                iconColorStyle += "-webkit-transform: rotate(" + options.iconRotate + "deg);";
+                iconColorStyle += "-moz-transform: rotate(" + options.iconRotate + "deg);";
+                iconColorStyle += "-o-transform: rotate(" + options.iconRotate + "deg);";
+                iconColorStyle += "-ms-transform: rotate(" + options.iconRotate + "deg);";
+                iconColorStyle += "transform: rotate(" + options.iconRotate + "deg);";
+            }
+            
+            if (options.text) {
+                return "<i style='" + iconColorStyle + "' class='" + options.extraClasses + " " + (options.prefix || "") + " " + iconSpinClass + " " + iconColorClass + "'>" + options.text + "</i>";
             }
 
-            return "<i " + inlineStyle + "' " + "class='" + options.extraClasses + " " + options.prefix + " " + iconClass + " " + iconSpinClass + " " + iconColorClass + "'></i>";
+            return "<i style='" + iconColorStyle + "' class='" + options.extraClasses + " " + (options.prefix || "") + " " + iconClass + " " + iconSpinClass + " " + iconColorClass + "'></i>";
         },
 
         _setIconStyles: function (img, name) {
