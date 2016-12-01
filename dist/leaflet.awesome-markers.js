@@ -61,7 +61,8 @@
             var iconClass,
                 iconSpinClass = "",
                 iconColorClass = "",
-                options = this.options,
+                iconColorStyle = "",
+                options = this.options;
 
             if(!options.prefix || (options.icon.slice(0,options.prefix.length+1) === options.prefix + "-")) {
                 iconClass = options.icon;

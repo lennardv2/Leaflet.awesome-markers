@@ -1,6 +1,6 @@
 {
   "name": "leaflet.awesome-markers",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Colorful, iconic & retina-proof markers for Leaflet, based on the Font Awesome/Twitter Bootstrap icons",
   "main": "index.js",
   "directories": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/toutpt/Leaflet.awesome-markers.git"
+    "url": "git+https://github.com/bhaskarvk/Leaflet.awesome-markers.git"
   },
   "keywords": [
     "leaflet"
@@ -19,7 +19,7 @@
   "author": "Lennard Voogdt",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/toutpt/Leaflet.awesome-markers/issues"
+    "url": "https://github.com/bhaskarvk/Leaflet.awesome-markers/issues"
   },
-  "homepage": "https://github.com/toutpt/Leaflet.awesome-markers#readme"
+  "homepage": "https://github.com/bhaskarvk/Leaflet.awesome-markers#readme"
 }
