@@ -6,31 +6,27 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
-  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../dist/leaflet.awesome-markers.css">
-
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
-  <!--[if lte IE 8]>
-      <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
-  <![endif]-->
-
-  <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+  <link href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@0.7.7/dist/leaflet.css" />
+  <link rel="stylesheet" href="../dist/leaflet.awesome-markers.css"/>
 
 </head>
 <body>
   <div id="map" style="width: 800px; height: 600px"></div>
 
-  <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet@0.7.7/dist/leaflet.js"></script>
   <script src="../dist/leaflet.awesome-markers.js"></script>
 
   <script>
     var map = L.map('map').setView([51.932994,4.509373], 14);
-
-    L.tileLayer('http://{s}.tile.cloudmade.com/{key}/22677/256/{z}/{x}/{y}.png', {
-      attribution: 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade. Font Awesome by Dave Gandy',
-      key: 'BC9A493B41014CAABB98F0471D759707'
-    }).addTo(map);
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw', {
+    maxZoom: 18,
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+      '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+      'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    id: 'mapbox.streets'
+  }).addTo(map);
 
     L.marker([51.941196,4.512291], {icon: L.AwesomeMarkers.icon({icon: 'link', prefix: 'glyphicon', markerColor: 'red', spin:true}) }).addTo(map);
     L.marker([51.927913,4.521303], {icon: L.AwesomeMarkers.icon({icon: 'certificate', prefix: 'glyphicon', markerColor: 'red'}) }).addTo(map);
@@ -41,7 +37,7 @@
 
     L.marker([51.930454,4.527054], {icon: L.AwesomeMarkers.icon({icon: 'bookmark', prefix: 'fa', markerColor: 'darkred'}) }).addTo(map);
     L.marker([51.929607,4.527054], {icon: L.AwesomeMarkers.icon({icon: 'picture-o', prefix: 'fa', markerColor: 'darkblue'}) }).addTo(map);
-    L.marker([51.928919,4.528856], {icon: L.AwesomeMarkers.icon({icon: 'move', prefix: 'fa', markerColor: 'cadetblue'}) }).addTo(map);
+    L.marker([51.928919,4.528856], {icon: L.AwesomeMarkers.icon({icon: 'suitcase', prefix: 'fa', markerColor: 'cadetblue'}) }).addTo(map);
     L.marker([51.930295,4.530745], {icon: L.AwesomeMarkers.icon({icon: 'play', prefix: 'fa', markerColor: 'darkpurple'}) }).addTo(map);
     L.marker([51.925055,4.512806], {icon: L.AwesomeMarkers.icon({icon: 'barcode', prefix: 'fa', markerColor: 'darkgreen'}) }).addTo(map);
     L.marker([51.925902,4.505768], {icon: L.AwesomeMarkers.icon({icon: 'inbox', prefix: 'fa', markerColor: 'darkblue'}) }).addTo(map);

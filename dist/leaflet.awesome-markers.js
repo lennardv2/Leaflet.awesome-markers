@@ -1,10 +1,10 @@
 /*
-  Leaflet.AwesomeMarkers, a plugin that adds colorful iconic markers for Leaflet, based on the Font Awesome icons
-  (c) 2012-2013, Lennard Voogdt
+ Leaflet.AwesomeMarkers, a plugin that adds colorful iconic markers for Leaflet, based on the Font Awesome icons
+ (c) 2012-2013, Lennard Voogdt
 
-  http://leafletjs.com
-  https://github.com/lvoogdt
-*/
+ http://leafletjs.com
+ https://github.com/lvoogdt
+ */
 
 /*global L*/
 
@@ -31,7 +31,9 @@
             extraClasses: '',
             icon: 'home',
             markerColor: 'blue',
-            iconColor: 'white'
+            iconColor: 'white',
+            iconRotate: 0,
+            font: 'monospace'
         },
 
         initialize: function (options) {
@@ -56,9 +58,13 @@
         },
 
         _createInner: function() {
-            var iconClass, iconSpinClass = "", iconColorClass = "", iconColorStyle = "", options = this.options;
+            var iconClass,
+                iconSpinClass = "",
+                iconColorClass = "",
+                iconColorStyle = "",
+                options = this.options;
 
-            if(options.icon.slice(0,options.prefix.length+1) === options.prefix + "-") {
+            if(!options.prefix || (options.icon.slice(0,options.prefix.length+1) === options.prefix + "-")) {
                 iconClass = options.icon;
             } else {
                 iconClass = options.prefix + "-" + options.icon;
@@ -69,14 +75,32 @@
             }
 
             if(options.iconColor) {
-                if(options.iconColor === 'white' || options.iconColor === 'black') {
+                if ((options.iconColor === 'white' || options.iconColor === 'black') &&
+                    options.prefix !== 'fa') {
                     iconColorClass = "icon-" + options.iconColor;
+                } else if (options.prefix === 'fa' && options.iconColor === 'white') {
+                  iconColorClass = "fa-inverse";
                 } else {
-                    iconColorStyle = "style='color: " + options.iconColor + "' ";
+                    iconColorStyle = "color: " + options.iconColor + ";";
                 }
             }
+            if(options.font && options.text) {
+                iconColorStyle += "font-family: " + options.font + ";";
+            }
 
-            return "<i " + iconColorStyle + "class='" + options.extraClasses + " " + options.prefix + " " + iconClass + " " + iconSpinClass + " " + iconColorClass + "'></i>";
+            if(options.iconRotate && options.iconRotate !== 0) {
+                iconColorStyle += "-webkit-transform: rotate(" + options.iconRotate + "deg);";
+                iconColorStyle += "-moz-transform: rotate(" + options.iconRotate + "deg);";
+                iconColorStyle += "-o-transform: rotate(" + options.iconRotate + "deg);";
+                iconColorStyle += "-ms-transform: rotate(" + options.iconRotate + "deg);";
+                iconColorStyle += "transform: rotate(" + options.iconRotate + "deg);";
+            }
+            
+            if (options.text) {
+                return "<i style='" + iconColorStyle + "' class='" + options.extraClasses + " " + (options.prefix || "") + " " + iconSpinClass + " " + iconColorClass + "'>" + options.text + "</i>";
+            }
+
+            return "<i style='" + iconColorStyle + "' class='" + options.extraClasses + " " + (options.prefix || "") + " " + iconClass + " " + iconSpinClass + " " + iconColorClass + "'></i>";
         },
 
         _setIconStyles: function (img, name) {
@@ -112,14 +136,11 @@
 
             this._setIconStyles(div, 'shadow');
             return div;
-      }
+        }
     });
-        
+
     L.AwesomeMarkers.icon = function (options) {
         return new L.AwesomeMarkers.Icon(options);
     };
 
 }(this, document));
-
-
-
