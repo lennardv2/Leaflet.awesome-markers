@@ -1,10 +1,10 @@
 /*
-  Leaflet.AwesomeMarkers, a plugin that adds colorful iconic markers for Leaflet, based on the Font Awesome icons
-  (c) 2012-2013, Lennard Voogdt
+ Leaflet.AwesomeMarkers, a plugin that adds colorful iconic markers for Leaflet, based on the Font Awesome icons
+ (c) 2012-2013, Lennard Voogdt
 
-  http://leafletjs.com
-  https://github.com/lvoogdt
-*/
+ http://leafletjs.com
+ https://github.com/lvoogdt
+ */
 
 /*global L*/
 
@@ -31,7 +31,8 @@
             extraClasses: '',
             icon: 'home',
             markerColor: 'blue',
-            iconColor: 'white'
+            iconColor: 'white',
+            iconRotate: 0
         },
 
         initialize: function (options) {
@@ -56,7 +57,11 @@
         },
 
         _createInner: function() {
-            var iconClass, iconSpinClass = "", iconColorClass = "", iconColorStyle = "", options = this.options;
+            var iconClass,
+                iconSpinClass = "",
+                iconColorClass = "",
+                options = this.options,
+                inlineStyle = "style='";
 
             if(options.icon.slice(0,options.prefix.length+1) === options.prefix + "-") {
                 iconClass = options.icon;
@@ -72,11 +77,19 @@
                 if(options.iconColor === 'white' || options.iconColor === 'black') {
                     iconColorClass = "icon-" + options.iconColor;
                 } else {
-                    iconColorStyle = "style='color: " + options.iconColor + "' ";
+                    inlineStyle += "color: " + options.iconColor + ";";
                 }
             }
 
-            return "<i " + iconColorStyle + "class='" + options.extraClasses + " " + options.prefix + " " + iconClass + " " + iconSpinClass + " " + iconColorClass + "'></i>";
+            if(options.iconRotate && options.iconRotate !== 0) {
+                inlineStyle += "-webkit-transform: rotate(" + options.iconRotate + "deg);";
+                inlineStyle += "-moz-transform: rotate(" + options.iconRotate + "deg);";
+                inlineStyle += "-o-transform: rotate(" + options.iconRotate + "deg);";
+                inlineStyle += "-ms-transform: rotate(" + options.iconRotate + "deg);";
+                inlineStyle += "transform: rotate(" + options.iconRotate + "deg);";
+            }
+
+            return "<i " + inlineStyle + "' " + "class='" + options.extraClasses + " " + options.prefix + " " + iconClass + " " + iconSpinClass + " " + iconColorClass + "'></i>";
         },
 
         _setIconStyles: function (img, name) {
@@ -112,14 +125,11 @@
 
             this._setIconStyles(div, 'shadow');
             return div;
-      }
+        }
     });
-        
+
     L.AwesomeMarkers.icon = function (options) {
         return new L.AwesomeMarkers.Icon(options);
     };
 
 }(this, document));
-
-
-
