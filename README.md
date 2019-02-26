@@ -100,7 +100,7 @@ Tweak size and positioning of the icons:
     }
 ````
 
-Set default prefix to something other than `glypicon`
+Set default prefix to something other than `glyphicon`
 
 ````js
     L.AwesomeMarkers.Icon.prototype.options.prefix = 'ion';
