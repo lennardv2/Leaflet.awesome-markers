@@ -113,8 +113,5 @@ See [JSFIddle](http://jsfiddle.net/markmarijnissen/VPzu4/286/)
 - Font Awesome: http://fortawesome.github.io/Font-Awesome/license/
 - Twitter Bootstrap: http://getbootstrap.com/
 
-## Contact
-- Email: lvoogdt@gmail.com
-- Website: http://lennardvoogdt.nl
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/lvoogdt/leaflet.awesome-markers/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
