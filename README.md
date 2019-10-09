@@ -91,6 +91,3 @@ L.marker([51.941196,4.512291], {icon: redMarker}).addTo(map);
 - Font Awesome: http://fortawesome.github.com/Font-Awesome/#license
 - Twitter Bootstrap: http://twitter.github.com/bootstrap/
 
-## Contact
-- Email: lvoogdt@gmail.com
-- Website: http://lennardvoogdt.nl
