@@ -31,7 +31,8 @@
             extraClasses: '',
             icon: 'home',
             markerColor: 'blue',
-            iconColor: 'white'
+            iconColor: 'white',
+            font: 'monospace'
         },
 
         initialize: function (options) {
@@ -58,7 +59,7 @@
         _createInner: function() {
             var iconClass, iconSpinClass = "", iconColorClass = "", iconColorStyle = "", options = this.options;
 
-            if(options.icon.slice(0,options.prefix.length+1) === options.prefix + "-") {
+            if(!options.prefix || (options.icon.slice(0,options.prefix.length+1) === options.prefix + "-")) {
                 iconClass = options.icon;
             } else {
                 iconClass = options.prefix + "-" + options.icon;
@@ -72,11 +73,21 @@
                 if(options.iconColor === 'white' || options.iconColor === 'black') {
                     iconColorClass = "icon-" + options.iconColor;
                 } else {
-                    iconColorStyle = "style='color: " + options.iconColor + "' ";
+                    iconColorStyle = "color: " + options.iconColor;
                 }
             }
+            if(options.font && options.text) {
+                if (iconColorStyle) {
+                    iconColorStyle += "; ";
+                }
+                iconColorStyle += "font-family: " + options.font;
+            }
+            
+            if (options.text) {
+                return "<i style='" + iconColorStyle + "' class='" + options.extraClasses + " " + options.prefix + " " + iconSpinClass + " " + iconColorClass + "'>" + options.text + "</i>";
+            }
 
-            return "<i " + iconColorStyle + "class='" + options.extraClasses + " " + options.prefix + " " + iconClass + " " + iconSpinClass + " " + iconColorClass + "'></i>";
+            return "<i style='" + iconColorStyle + "' class='" + options.extraClasses + " " + (options.prefix || "") + " " + iconClass + " " + iconSpinClass + " " + iconColorClass + "'></i>";
         },
 
         _setIconStyles: function (img, name) {
