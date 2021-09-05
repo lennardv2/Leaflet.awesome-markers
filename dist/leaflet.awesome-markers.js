@@ -27,6 +27,7 @@
             shadowSize: [36, 16],
             className: 'awesome-marker',
             prefix: 'glyphicon',
+            stylePrefix: 'glyphicon',
             spinClass: 'fa-spin',
             extraClasses: '',
             icon: 'home',
@@ -76,7 +77,7 @@
                 }
             }
 
-            return "<i " + iconColorStyle + "class='" + options.extraClasses + " " + options.prefix + " " + iconClass + " " + iconSpinClass + " " + iconColorClass + "'></i>";
+            return "<i " + iconColorStyle + "class='" + options.extraClasses + " " + options.stylePrefix + " " + iconClass + " " + iconSpinClass + " " + iconColorClass + "'></i>";
         },
 
         _setIconStyles: function (img, name) {
