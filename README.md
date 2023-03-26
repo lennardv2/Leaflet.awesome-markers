@@ -2,8 +2,8 @@
 Colorful iconic & retina-proof markers for Leaflet, based on the Glyphicons / Font-Awesome icons
 
 Version 3.0 of Leaflet.awesome-markers is tested with:
-- Bootstrap 3.4
-- Font Awesome 5.15
+- Bootstrap 3.4 & Bootstrap 5.3.0
+- Font Awesome 5.15 & Font Awesome 6.3.0
 - Ionicons 1.5.2
 - Leaflet 0.5-Latest
 
