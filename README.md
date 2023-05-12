@@ -113,8 +113,7 @@ See [JSFIddle](http://jsfiddle.net/markmarijnissen/VPzu4/286/)
 - Font Awesome: http://fortawesome.github.io/Font-Awesome/license/
 - Twitter Bootstrap: http://getbootstrap.com/
 
-## Contact
-- Email: lvoogdt@gmail.com
-- Website: http://lennardvoogdt.nl
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/lvoogdt/leaflet.awesome-markers/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Flennardv2%2FLeaflet.awesome-markers&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+    
+Check out [Color Gradient](https://colorgradient.dev), a tool for creating CSS Gradients.
