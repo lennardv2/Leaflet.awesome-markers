@@ -1,13 +1,13 @@
-# Leaflet.awesome-markers plugin v2.0
+# Leaflet.awesome-markers plugin v3.0
 Colorful iconic & retina-proof markers for Leaflet, based on the Glyphicons / Font-Awesome icons
 
-Version 2.0 of Leaflet.awesome-markers is tested with:
-- Bootstrap 3
-- Font Awesome 4.0
+Version 3.0 of Leaflet.awesome-markers is tested with:
+- Bootstrap 3.4 & Bootstrap 5.3.0
+- Font Awesome 5.15 & Font Awesome 6.3.0
 - Ionicons 1.5.2
 - Leaflet 0.5-Latest
 
-For bootstrap 2.x & Fontawesome 3.x use Leaflet.awesome-markers v1.0
+For bootstrap 3.x & Fontawesome 4.x use Leaflet.awesome-markers v2.0
 
 ## Screenshots
 ![AwesomeMarkers screenshot](https://raw.github.com/lvoogdt/Leaflet.awesome-markers/master/screenshots/screenshot-soft.png "Screenshot of AwesomeMarkers")
@@ -71,6 +71,7 @@ Add the ionicon stylesheet from a [CDN](http://code.ionicframework.com/ionicons/
 | Property        | Description            | Default Value | Possible  values                                     |
 | --------------- | ---------------------- | ------------- | ---------------------------------------------------- |
 | icon            | Name of the icon       | 'home'        | See glyphicons or font-awesome                       |
+| stylePrefix     | Select the icon font-face weight| 'glyphicon'   | 'fas' for font-awesome solid, 'far' for font-awesome regular, 'fal' for font-awesome light, 'fad' for font-awesome duotone, 'fab' for font-awesome brands or 'glyphicon' for bootstrap 3 |
 | prefix          | Select the icon library| 'glyphicon'   | 'fa' for font-awesome or 'glyphicon' for bootstrap 3 |
 | markerColor     | Color of the marker    | 'blue'        | 'red', 'darkred', 'orange', 'green', 'darkgreen', 'blue', 'purple', 'darkpurple', 'cadetblue' |
 | iconColor       | Color of the icon      | 'white'       | 'white', 'black' or css code (hex, rgba etc) |
@@ -86,7 +87,7 @@ The 'icon' property supports these strings:
 - 'star'
 - 'bookmark'
 - .... and many more, see: http://fortawesome.github.io/Font-Awesome/icons/
-- Or: http://getbootstrap.com/components/#glyphicons
+- Or: https://getbootstrap.com/docs/3.4/components/#glyphicons
 - Or: http://ionicons.com
 
 ### Tips & Tricks
